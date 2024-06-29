@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ReminderActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6C63FF"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Reminder"
+                android:textSize="20sp"
+                />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:context=".ui.MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/container_time"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="@drawable/bg_circle">
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/baseline_notifications_active_24"
+                app:tint="#6C63FF" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select \nTime"
+                android:id="@+id/tv_time"
+                android:textSize="32sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#6C63FF"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp">
+
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_set_alarm"
+                android:text="Set \nAlarm"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:layout_marginStart="40dp"
+                android:backgroundTint="#6C63FF" />
+
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_cancel_alarm"
+                android:text="Cancel \nAlarm"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#6C63FF"
+                android:layout_marginEnd="40dp"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
